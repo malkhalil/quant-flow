@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  quantflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quantflow
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
